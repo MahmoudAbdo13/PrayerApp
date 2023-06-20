@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Prayer App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="nextPrayerTV">Next\nPrayer</string>
+    <string name="_1_20_nminutes">1:20\nMinutes</string>
+    <string name="dummyAddress">Elsamara,TemeiElamdia,Dakhlia</string>
+    <string name="dummyDate">2023/Dec/23</string>
+    <string name="qibla_direction">Qibla Direction</string>
+    <string name="latlongDummy">lat:12.21212\nLong:12.554544</string>
+    <string name="qiblaDirection">Qibla Direction</string>
+    <string name="show_on_map">Show on map!!</string>
+    <string name="hijri_date">Hijri Date:</string>
+    <string name="miladiDate">Gregorian:</string>
+    <string name="search">Search</string>
+    <string name="kaaba">Kaaba</string>
+    <string name="yourLocation">Your Location</string>
+    <string name="fagrTime">Fajr</string>
+    <string name="shroukTime">Sunrise </string>
+    <string name="zohrTime">Dhuhr</string>
+    <string name="asrTime">Asr</string>
+    <string name="magrbeTime">Magribe</string>
+    <string name="isha_time">Isha</string>
+    <string name="next_prayer">Next Prayer</string>
+    <string name="isha">ISHA</string>
+</resources>

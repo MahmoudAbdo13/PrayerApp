@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/prayer_times_fragment">
+
+    <fragment
+        android:id="@+id/prayer_times_fragment"
+        android:name="com.example.prayerapp.prayertimes.PrayerTimesFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_prayer_times" >
+        <action
+            android:id="@+id/action_prayer_times_fragment_to_qiblaFragment"
+            app:destination="@id/qiblaFragment" />
+    </fragment>
+    <!--
+        <fragment
+            android:id="@+id/qibla_fragment"
+            android:name="com.example.prayerapp.qibla.QiblaFragment"
+            android:label="@string/app_name"
+            tools:layout="@layout/ment_qibla" />
+
+        <fragment
+            android:id="@+id/nav_splash"
+            android:name="com.example.prayerapp.SplashFragment"
+            tools:layout="@layout/splash_screen" />
+    -->
+
+    <fragment
+        android:id="@+id/qiblaFragment"
+        android:name="com.example.prayerapp.qibla.QiblaFragment"
+        android:label="QiblaFragment"
+        tools:layout="@layout/fragment_qibla">
+        <argument
+            android:name="location_late_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="location_long_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="location_altitued_args"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="address_gyocoder_args"
+            app:argType="string" />
+
+        <argument
+            android:name="date_args"
+            app:argType="string" />
+<!--
+        <action
+            android:id="@+id/action_qiblaFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+-->
+    </fragment>
+</navigation>

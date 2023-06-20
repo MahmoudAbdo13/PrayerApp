@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_login"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="154dp"
+        android:layout_height="134dp"
+        android:background="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/logo"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:id="@+id/layout"
+    android:visibility="gone">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/address"
+        app:layout_constraintEnd_toStartOf="@+id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="address"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12-4-1444"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/address"
+        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="@+id/prayers_list"
+    app:layout_constraintTop_toBottomOf="@+id/address"
+    android:id="@+id/linear"
+    android:layout_margin="10dp"
+    android:paddingEnd="5dp">
+
+    <TextView
+        android:id="@+id/next_prayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_prayer"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/prayer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/isha"
+        android:textSize="28sp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/time_left"
+        app:layout_constraintStart_toEndOf="@+id/next_prayer"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
+
+    <TextView
+        android:id="@+id/time_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:paddingBottom="5dp"
+        android:text="time_left"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:textSize="20sp" />
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/prayers_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        tools:itemCount="5"
+        tools:listitem="@layout/list_item_times" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show_on_map_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_700"
+        android:drawableStart="@drawable/location_on_24"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Show Qibla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prayers_list"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/prayer_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
